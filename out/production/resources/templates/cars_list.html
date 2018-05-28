@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>All cars</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+        th {
+            text-align: left;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<table style="width:100%">
+    <tbody>
+    <td>Id</td>
+    <td>VIN</td>
+    <td>Brand</td>
+    <td>Model</td>
+    </th>
+    <tr th:each="car : ${ carDtoList}">
+        <td th:text="${ car.id }">ID</td>
+        <td th:text="${ car.vin }">VIN</td>
+        <td th:text="${ car.brand }">User name</td>
+        <td th:text="${ car.model }">Role</td>
+    </tr>
+    </tbody>
+</table>
+<form action="#" th:action="@{/administrator}"  method="get">
+    <p><input type="submit" class="button"  value="Go back to menu" />
+    </p>
+</form>
+</body>
+
+</html>

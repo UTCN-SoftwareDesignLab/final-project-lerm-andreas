@@ -1,0 +1,134 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Administrator page</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+
+            form {
+
+                margin-left: 300px;
+                margin-top:100px;
+            }
+
+            p{
+            align-content: center;
+            }
+    </style>
+</head>
+
+<body style="background-image:url('https://img2.goodfon.ru/original/1920x1080/8/97/minimalism-minimalizm-17.jpg')">
+<p style="font-size:160%;">Administrator page</p>
+<table>
+
+    <tr>
+
+        <th>
+          <form  th:marginheight="100" action="#" th:action="@{/createUserForm}" method="get">
+                <div class="wrapper">
+                    <button class="button" th:bgcolor="red">Add User</button>
+                </div>
+            </form></div>
+
+        </th>
+
+        <th>
+            <form  action="#" th:action="@{/createCarForm}" method="get">
+                <div class="wrapper">
+                    <button class="button">Add car</button>
+                </div>
+            </form>
+        </th>
+
+        <th>
+            <form  action="#" th:action="@{/createCustomerForm}" method="get">
+                <div class="wrapper">
+                    <button class="button">Add customer</button>
+                </div>
+            </form>
+        </th>
+
+    </tr>
+
+    <tr>
+        <th>
+            <form  action="#" th:action="@{/deleteUserForm}" method="get">
+                <div class="wrapper">
+                    <button class="button">Remove user</button>
+                </div>
+            </form>
+        </th>
+
+        <th>
+            <form th:align="center" action="#" th:action="@{/deleteCarForm}" method="get">
+                <div class="wrapper">
+                    <button class="button">Remove car</button>
+                </div>
+            </form>
+        </th>
+
+        <th>
+            <form th:align="center" action="#" th:action="@{/deleteCustomerForm}" method="get">
+                <div class="wrapper">
+                    <button class="button">Remove customer</button>
+                </div>
+            </form>
+        </th>
+    </tr>
+
+    <tr>
+        <th>
+            <form th:align="center" action="#" th:action="@{/getUserForm}" method="get">
+                <div class="wrapper">
+                    <button class="button">Get details of a user</button>
+                </div>
+            </form>
+        </th>
+
+        <th>
+            <form th:align="center" action="#" th:action="@{/getCarForm}" method="get">
+                <div class="wrapper">
+                    <button class="button">Get details of a car</button>
+                </div>
+            </form>
+        </th>
+
+        <th>
+            <form th:align="center" action="#" th:action="@{/getCustomerForm}" method="get">
+                <div class="wrapper">
+                    <button class="button">Get details of a customer</button>
+                </div>
+            </form>
+        </th>
+    </tr>
+
+    <tr>
+        <th>
+            <form th:align="center" action="#" th:action="@{/updateUserForm}" method="get">
+                <div class="wrapper">
+                    <button class="button">Update user information</button>
+                </div>
+            </form>
+        </th>
+
+        <th>
+            <form th:align="center" action="#" th:action="@{/updateCarForm}" method="get">
+                <div class="wrapper">
+                    <button class="button">Update car information</button>
+                </div>
+            </form>
+        </th>
+
+        <th>
+            <form th:align="center" action="#" th:action="@{/updateCustomerForm}" method="get">
+                <div class="wrapper">
+                    <button class="button">Update customer information</button>
+                </div>
+            </form>
+        </th>
+
+    </tr>
+
+</table>
+</body>
+</html>

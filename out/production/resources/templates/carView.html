@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: 0;
+  font-size: 28px;
+}
+
+.header {
+  background-color: #f1f1f1;
+  padding: 30px;
+  text-align: center;
+}
+
+#navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+#navbar a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
+
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+.row{
+margin-left: 500px;
+}
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+div#d12346{
+
+    border: none;
+      outline: 0;
+      display: inline-block;
+      padding: 8px;
+      color: white;
+      background-color: black;
+      text-align: center;
+      cursor: pointer;
+      width: 95%;
+}
+  div#d12347{
+    margin-left: 600px;
+  }
+
+</style>
+</head>
+<body>
+
+
+<div class="header">
+  <h2>Scroll Down</h2>
+  <p>Scroll down to see the sticky effect.</p>
+</div>
+
+<div id="navbar">
+  <a class="active" href="javascript:void(0)">Home</a>
+  <a href="javascript:void(0)">News</a>
+  <a href="javascript:void(0)">Contact</a>
+</div>
+
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
+
+
+
+
+<h2>Responsive "Meet The Team" Section</h2>
+<p>Resize the browser window to see the effect.</p>
+
+
+<!--<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="http://backgroundcheckall.com/wp-content/uploads/2017/12/car-white-background-14.jpg" alt="Jane" style="width:100%">
+      <div class="container">
+        <h2>Jane Doe</h2>
+        <p class="title">CEO & Founder</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>example@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="http://backgroundcheckall.com/wp-content/uploads/2017/12/car-white-background-14.jpg" alt="Mike" style="width:100%">
+      <div class="container">
+        <h2>Mike Ross</h2>
+        <p class="title">Art Director</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>example@example.com</p>
+        <div id="d12346">
+             <a href="http://localhost:8080/cars/12346">Useless Link</a>
+         </div>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <img src="http://backgroundcheckall.com/wp-content/uploads/2017/12/car-white-background-14.jpg" alt="John" style="width:100%">
+      <div class="container">
+        <h2>John Doe</h2>
+        <p class="title">Designer</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>example@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+      <div class="card">
+            <img src="http://backgroundcheckall.com/wp-content/uploads/2017/12/car-white-background-14.jpg" alt="John" style="width:100%">
+            <div class="container">
+              <h2>John Doe</h2>
+              <p class="title">Designer</p>
+              <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+              <p>example@example.com</p>
+              <p><button class="button">Contact</button></p>
+            </div>
+    </div>
+  </div>
+</div>-->
+for
+<div id="d12347" class="column">
+  <div class="card">
+    <img src="http://backgroundcheckall.com/wp-content/uploads/2017/12/car-white-background-14.jpg" alt="John" style="width:100%">
+    <div class="container">
+      <h2>John Doe</h2>
+      <p class="title">Designer</p>
+      <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+      <p>example@example.com</p>
+      <div id="d12346">
+        <a href="http://localhost:8080/cars/12346">Rent this car</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="http://backgroundcheckall.com/wp-content/uploads/2017/12/car-white-background-14.jpg" alt="John" style="width:100%">
+      <div class="container">
+        <h2>John Doe</h2>
+        <p class="title">Designer</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>example@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<table style="width:100%">
+  <tbody>
+  <td>Id</td>
+  <td>User name</td>
+  <td>Role</td>
+  </th>
+  <div id="d12347" class="column">
+    <div class="card">
+  <tr th:each="car : ${ carDtoList}">
+    <td<img src="http://backgroundcheckall.com/wp-content/uploads/2017/12/car-white-background-14.jpg" alt="John" style="width:100%"></td>
+    <td th:text="${ car.id }">ID</td>
+  </tr>
+  </tbody>
+</table>
+
+</body>
+</html>

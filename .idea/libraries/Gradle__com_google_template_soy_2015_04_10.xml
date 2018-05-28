@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.google.template:soy:2015-04-10">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.template/soy/2015-04-10/f2a260c0eafbc5756ccec546efd2ffd5b0a583cb/soy-2015-04-10.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.template/soy/2015-04-10/f95d59546f858bd7a30052df181c0e65fa4a595f/soy-2015-04-10-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

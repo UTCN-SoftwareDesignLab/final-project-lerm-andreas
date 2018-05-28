@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Change car status form</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <style>
+        th {
+            text-align: left;
+        }
+        table#t01 td:nth-child(even) {
+            border: 1px solid black;
+
+        }
+
+        table#t01 td:nth-child(odd) {
+            border: 1px solid black;
+        }
+
+        table#t01 tr:nth-child(even) {
+            background-color: #eee;
+
+        }
+
+        table#t01 tr:nth-child(odd) {
+            background-color: #fff;
+        }
+        table#t01 th {
+            background-color: black;
+            color: white;
+        }
+        .btn {
+                    background-color: grey;
+                    border: none;
+                    color: white;
+                    padding: 12px 16px;
+                    font-size: 16px;
+                    cursor: pointer;
+                }
+    </style>
+
+</head>
+<body>
+<h1>Change available or returned status</h1>
+<form action="#" th:action="@{/changeAvailableStatus}" th:object="${car}" method="post">
+    <table>
+        <tr>
+            <td>Vehicle identification number:</td>
+            <td><input type="text" th:field="*{vin}" /></td>
+            <td th:if="${#fields.hasErrors('vin')}" th:errors="*{vin}">Vin Error</td>
+        </tr>
+
+        <tr>
+            <td>Available:</td>
+            <td><input type="text" th:field="*{available}" /></td>
+        </tr>
+            <td><input type="submit" value="Change available status" /></td>
+        </tr>
+    </table>
+</form>
+
+<form action="#" th:action="@{/changeReturnedStatus}" th:object="${car}" method="post">
+    <table>
+        <tr>
+            <td>Vehicle identification number:</td>
+            <td><input type="text" th:field="*{vin}" /></td>
+            <td th:if="${#fields.hasErrors('vin')}" th:errors="*{vin}">Vin Error</td>
+        </tr>
+
+        <tr>
+            <td>Returned:</td>
+            <td><input type="text" th:field="*{returned}" /></td>
+        </tr>
+            <td><input type="submit" value="Change returned status" /></td>
+        </tr>
+    </table>
+</form>
+
+
+<table id="t01" style="width:100%">
+    <tbody>
+    <th>Id</th>
+    <th>VIN</th>
+    <th>Brand</th>
+    <th>Model</th>
+    <th>Available</th>
+    <th>Returned</th>
+    </th>
+    <tr th:each="car : ${ carDtoList}">
+        <td th:text="${ car.id }">ID</td>
+        <td th:text="${ car.vin }">VIN</td>
+        <td th:text="${ car.brand }">User name</td>
+        <td th:text="${ car.model }">Role</td>
+        <td th:text="${ car.available }">Available</td>
+         <td th:text="${car.returned }">Returned</td>
+    </tr>
+    </tbody>
+</table>
+<form action="#" th:action="@{/admin}"  method="get">
+    <button type="submit" class="btn">  <i class="fa fa-home"></i></button>
+</form>
+</body>
+</html>

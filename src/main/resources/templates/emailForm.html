@@ -1,0 +1,133 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Add customer form</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <style>
+        th {
+            text-align: left;
+        }
+        table#t01 td:nth-child(even) {
+            border: 1px solid black;
+
+        }
+
+        table#t01 td:nth-child(odd) {
+            border: 1px solid black;
+        }
+
+        table#t01 tr:nth-child(even) {
+            background-color: #eee;
+
+        }
+
+        table#t01 tr:nth-child(odd) {
+            background-color: #fff;
+        }
+        table#t01 th {
+            background-color: black;
+            color: white;
+        }
+
+        th {
+            text-align: left;
+        }
+        table#t02 td:nth-child(even) {
+            border: 1px solid black;
+
+        }
+
+        table#t02 td:nth-child(odd) {
+            border: 1px solid black;
+        }
+
+        table#t02 tr:nth-child(even) {
+            background-color: #eee;
+
+        }
+
+        table#t02 tr:nth-child(odd) {
+            background-color: #fff;
+        }
+        table#t02 th {
+            background-color: black;
+            color: white;
+        }
+        .btn {
+            background-color: grey;
+            border: none;
+            color: white;
+            padding: 12px 16px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+
+
+</head>
+<body>
+<h1>Insert customer data and details of the associated car</h1>
+<form action="#" th:action="@{/emailSuccess}" th:object="${carRentalDetails}" method="get">
+    <table>
+        <tr>
+            <td>Name:</td>
+            <td><input type="text" th:field="*{name}" /></td>
+            <td th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Name Error</td>
+
+        </tr>
+
+        <tr>
+
+            <td>Identity card number:</td>
+            <td><input type="text" th:field="*{identityCardNumber}" /></td>
+            <td th:if="${#fields.hasErrors('identityCardNumber')}" th:errors="*{identityCardNumber}">IdentityCardNumber Error</td>
+
+        </tr>
+
+        <tr>
+            <td>Email:</td>
+            <td><input type="text" th:field="*{email}" /></td>
+            <td th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Email Error</td>
+        </tr>
+
+        <tr>
+            <td>Date of birth:</td>
+            <td><input type="date" id="dateOfBirth" th:field="*{dateOfBirth}" /></td>
+            <td th:if="${#fields.hasErrors('dateOfBirth')}" th:errors="*{dateOfBirth}">DateOfBirth Error</td>
+        </tr>
+
+        <tr>
+            <td>Address:</td>
+            <td><input type="text" th:field="*{address}" /></td>
+            <td th:if="${#fields.hasErrors('address')}" th:errors="*{address}">Address Error</td>
+        </tr>
+
+        <tr>
+            <td>Starting location:</td>
+            <td><input type="text" th:field="*{startingLocation}" /></td>
+
+        </tr>
+
+        <tr>
+            <td>Final location:</td>
+            <td><input type="text" th:field="*{finalLocation}" /></td>
+
+        </tr>
+
+        <tr>
+            <td>
+        <input type="hidden" th:value = "${car.vin}" name="vin" />
+        <p><input type="submit" class="button" value="Email" name="Rent this car" />
+            </td>
+        </tr>
+
+        <td>
+        <button type="submit" th:formaction="@{/maps}"  value="Maps" >Maps</button>
+        </td>
+    </table>
+</form>
+
+</body>
+</html>
